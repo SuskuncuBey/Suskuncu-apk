@@ -1,7 +1,49 @@
-/suskuncu-apk
-├─ index.html
-└─ apk/
-    └─ benim-konusan-tomum-hileli-apkdayi.com.apk
-git add .
-git commit -m "Add index.html and APK"
-git push origin main
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SuskuncuApk - APK İndir</title>
+<style>
+  body { font-family: Arial; background: #f5f5f5; padding: 20px; }
+  h1 { margin-bottom: 20px; }
+  .card { background: #fff; padding: 15px; border-radius: 10px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .title { font-weight: bold; margin-bottom: 8px; }
+  .desc { margin-bottom: 8px; color: #555; }
+  .btn { background: #2563eb; color: #fff; padding: 8px 12px; border: none; border-radius: 6px; cursor: pointer; text-decoration: none; }
+</style>
+</head>
+<body>
+<h1>SuskuncuApk - APK İndir</h1>
+<div id="list"></div>
+
+<script>
+const items = [
+  {
+    id:1,
+    title:'Benim Konuşan Tom - Hileli',
+    desc:'Demo hileli sürüm',
+    size:'150 MB',
+    file:'apk/benim-konusan-tomum-hileli-apkdayi.com.apk'
+  }
+];
+
+function renderList(){
+  const grid = document.getElementById('list');
+  grid.innerHTML = '';
+  for(const it of items){
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.innerHTML = `
+      <div class="title">${it.title}</div>
+      <div class="desc">${it.desc} • ${it.size}</div>
+      <a href="${it.file}" download class="btn">APK İndir</a>
+    `;
+    grid.appendChild(el);
+  }
+}
+
+renderList();
+</script>
+</body>
+</html>
