@@ -1,0 +1,10 @@
+/suskuncu-apk
+├─ index.html
+├─ apk/
+│   └─ benim-konusan-tomum-hileli-apkdayi.com.apk
+├─ server.js
+└─ package.json
+heroku login
+heroku create suskuncu-apk-demo
+git push heroku main
+heroku open
