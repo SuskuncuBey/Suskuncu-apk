@@ -4,7 +4,29 @@
 │   └─ benim-konusan-tomum-hileli-apkdayi.com.apk
 ├─ server.js
 └─ package.json
+
+1. Heroku’ya giriş
+
 heroku login
+
+2. Heroku’da uygulama oluştur
+
 heroku create suskuncu-apk-demo
+
+3. Gerekli paketleri yükle
+
+npm install
+
+4. Git ile değişiklikleri ekle ve commit et
+
+git init
+git add .
+git commit -m "Heroku deploy için hazır"
+
+5. Heroku’ya push et
+
 git push heroku main
+
+6. Siteyi aç
+
 heroku open
