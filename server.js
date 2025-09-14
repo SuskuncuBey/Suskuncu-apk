@@ -18,3 +18,6 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+git add server.js package.json       # Dosyaları Git’e ekler
+git commit -m "Add Heroku server files"   # Değişiklikleri commit eder
+git push origin main                 # GitHub’a gönderir
